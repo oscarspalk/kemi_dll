@@ -5,7 +5,7 @@ class Element
 {
 public:
 
-	Element(double n, double sym, double m) {
+	Element(std::string n, std::string sym, double m) {
 		atomic_mass = m;
 		symbol = sym;
 		name = n;
