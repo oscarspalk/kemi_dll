@@ -11,12 +11,15 @@ namespace Tests
 		
 		TEST_METHOD(TestInit)
 		{
-			initlib();
-			Assert::AreEqual("", G(2));
+			initlib("C:\\Program Files\\Maple 2022");
+			Assert::AreEqual("Lithium", G(2));
 		}
 
-		TEST_METHOD(TestM) {
-			Assert::AreEqual("Oscar", M("Oscar"));
+		TEST_METHOD(TestDifferentMasses) {
+			initlib("C:\\Program Files\\Maple 2022");
+			Assert::AreEqual(58.4397692820000003, M("NaCl"));
+			Assert::AreEqual(1.00800000000000001, M("H"));
+			Assert::AreEqual(315.0, M("Uue"));
 		}
 	};
 }
